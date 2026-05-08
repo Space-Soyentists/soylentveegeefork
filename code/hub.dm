@@ -8,7 +8,7 @@ If not, let us know on the main tgstation IRC channel of irc.rizon.net #tgstatio
 */
 
 #define OPEN_TO_HUB_PLAYERCOUNT_DEFAULT 67
-#define DEFAULT_SERVER_NAME "Sharty Station 13 "
+#define DEFAULT_SERVER_NAME "Sharty Station 13 (LRP) "
 #define DEFAULT_SERVER_DESCRIPTION "Back in action!"
 
 /world
