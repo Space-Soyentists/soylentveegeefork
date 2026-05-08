@@ -1,6 +1,0 @@
-author: myfrogfriend
-delete-after: true
-changes:
-- tweak: client.view is now 21x15 happy widescreen everybody
-- tweak: moved a couple hud things around
-- imageadd: redid some sprites to make it fit
