@@ -114,5 +114,8 @@
 	// Duplicate from /datum
 	var/list/active_timers = list()
 
+	// the client view thingy
+	view = WORLD_VIEW
+
 var/list/person_animation_viewers = list()
 var/list/item_animation_viewers = list()

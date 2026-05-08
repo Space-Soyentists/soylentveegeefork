@@ -19,10 +19,10 @@
 		if(screen.anim_state)
 			flick("[screen.anim_state][severity]",screen)
 		client.screen += screen
-		if (screen.screen_loc == "CENTER-7,CENTER-7" && screen.view != client.view && screen.scaling)
-			var/scale = (1 + 2 * client.view) / 15
-			screen.view = client.view
-			screen.transform = matrix(scale, 0, 0, 0, scale, 0)
+		// if (screen.screen_loc == "CENTER-10,CENTER-7" && screen.view != client.view && screen.scaling)
+		// 	var/scale = (1 + 2 * client.view) / 21
+		// 	screen.view = client.view
+		// 	screen.transform = matrix(scale, 0, 0, 0, scale, 0)
 		if(screen.clear_after_length)
 			spawn(screen.clear_after_length)
 				clear_fullscreen(category, animate = 0)
@@ -80,9 +80,10 @@
 			mymob.client.screen |= A
 
 /obj/abstract/screen/fullscreen
-	icon = 'icons/mob/screen1_full.dmi'
+	// icon = 'icons/mob/screen1_full.dmi'
+	icon = 'icons/mob/screen1_full_21x15.dmi'
 	icon_state = "default"
-	screen_loc = "CENTER-7,CENTER-7"
+	screen_loc = "CENTER-10,CENTER-7"
 	layer = FULLSCREEN_LAYER
 	plane = FULLSCREEN_PLANE
 	mouse_opacity = 0
