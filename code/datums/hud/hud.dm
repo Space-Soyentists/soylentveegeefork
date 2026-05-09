@@ -182,6 +182,6 @@ Helper procs and procs used in mobs
 		if(!M.client)
 			continue
 		var/client/C = M.client
-		if(get_dist(get_turf(M), get_turf(target)) <= (C.view + DATAHUD_RANGE_OVERHEAD))
+		if(get_dist(get_turf(M), get_turf(target)) <= (client_view_num(C.view) + DATAHUD_RANGE_OVERHEAD))
 			M.clean_up_hud()
 			M.handle_hud_vision_updates()
