@@ -1,5 +1,0 @@
-author: myfrogfriend
-delete-after: true
-changes:
-- bugfix: Fixed the Meson Visor overlay not fitting to the entire client.view
-- bugfix: Fixed examining objects not working due to client.view change
