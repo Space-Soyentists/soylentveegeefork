@@ -117,5 +117,10 @@
 	// the client view thingy
 	view = WORLD_VIEW
 
+/proc/client_view_num(var/view)
+	var/view_width_num = text2num(splittext(view, "x")[1])
+
+	return floor(view_width_num / 2)
+
 var/list/person_animation_viewers = list()
 var/list/item_animation_viewers = list()
