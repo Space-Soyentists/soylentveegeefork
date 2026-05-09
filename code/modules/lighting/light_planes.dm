@@ -42,5 +42,5 @@
 /obj/abstract/screen/plane/dark/New()
 	..()
 	var/matrix/M = matrix()
-	M.Scale(world.view*2.2)
+	M.Scale(client_view_num(WORLD_VIEW)*2.2)
 	transform = M

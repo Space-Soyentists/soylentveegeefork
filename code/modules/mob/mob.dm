@@ -1134,7 +1134,7 @@ Use this proc preferably at the end of an equipment loadout
 		to_chat(src, "<span class='sinister'>[pick("Oh god what's this even?","Paranoia and panic prevent you from calmly observing whatever this is.")]</span>")
 		return
 
-	if(get_dist(A,client.eye) > client.view)
+	if(get_dist(A,client.eye) > client_view_num(client.view))
 		to_chat(src, "<span class='notice'>It is too far away to make out.</span>")
 		return
 

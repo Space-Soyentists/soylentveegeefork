@@ -760,8 +760,9 @@ NOTE:  You will only be polled about this role once per round. To change your ch
 
 	if(!istype(mob, /mob/dead/observer) && !(M_XRAY in mob.mutations))	//If they are neither an observer nor someone with X-ray vision
 		for(var/obj/structure/window/W in one_way_windows)
-			if(((W.x >= (mob.x - view)) && (W.x <= (mob.x + view))) && ((W.y >= (mob.y - view)) && (W.y <= (mob.y + view))))
-				update_one_way_windows(view(view,mob))	//Updating the one-way window overlay if the client has one in the range of its view.
+			var/view_num = client_view_num(view)
+			if(((W.x >= (mob.x - view_num)) && (W.x <= (mob.x + view_num))) && ((W.y >= (mob.y - view_num)) && (W.y <= (mob.y + view_num))))
+				update_one_way_windows(view(view_num,mob))	//Updating the one-way window overlay if the client has one in the range of its view_num.
 				break
 
 /client/proc/update_one_way_windows(var/list/v)		//Needed for one-way windows to work.
