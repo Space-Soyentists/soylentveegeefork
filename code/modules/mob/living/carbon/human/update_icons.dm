@@ -908,7 +908,7 @@ var/global/list/damage_icon_parts = list()
 		overlays += overlays_standing[SUIT_STORE_LAYER] = suit_store_overlay
 		var/x_pixel_offset = initial(s_store.pixel_x)
 		var/y_pixel_offset = initial(s_store.pixel_y)
-		s_store.screen_loc = "WEST+2:[(10+x_pixel_offset)*PIXEL_MULTIPLIER],SOUTH:[(5+y_pixel_offset)*PIXEL_MULTIPLIER]"
+		s_store.screen_loc = "WEST+5:[(10+x_pixel_offset)*PIXEL_MULTIPLIER],SOUTH:[(5+y_pixel_offset)*PIXEL_MULTIPLIER]"
 	if(update_icons)
 		update_icons()
 
