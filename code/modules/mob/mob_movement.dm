@@ -273,6 +273,7 @@
 		return
 
 	if(mob.stat == DEAD)
+		mob.ghostize()
 		return
 
 	if(isAI(mob))
