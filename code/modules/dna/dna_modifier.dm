@@ -301,14 +301,18 @@
 	return TRUE
 
 /mob/proc/ghost_reenter_alert(var/message) //!M.client = mob has ghosted out of their body
+	set waitfor = FALSE
 	if(!client && mind)
 		var/mob/dead/observer/ghost = mind_can_reenter(mind)
 		if(ghost)
 			var/mob/ghostmob = ghost.get_top_transmogrification()
 			if(ghostmob)
 				ghostmob << 'sound/effects/adminhelp.ogg'
-				to_chat(ghostmob, "<span class='interface big'><span class='bold'>[message]</span> \
-					(Verbs -> Ghost -> Re-enter corpse, or <a href='?src=\ref[ghost];reentercorpse=1'>click here!</a>)</span>")
+				switch(alert("[message]\n Would you like to reenter your body?", "My hero!", "Yes", "No"))
+					if("Yes")
+						ghost.reenter_corpse()
+					if("No")
+						to_chat(ghostmob, "If you change your mind, Press the Re-enter corpse button on your hud or (Verbs -> Ghost -> Re-enter corpse, or you can <a href='?src=\ref[ghost];reentercorpse=1'>click here!</a>)</span>")
 				return TRUE
 	return FALSE
 
