@@ -112,7 +112,8 @@ var/const/MAX_SAVE_SLOTS = 16
 /datum/preferences
 	var/list/subsections
 	//doohickeys for savefiles
-	var/database/db = ("players2.sqlite")
+	// I wish the retard who placed it outside of data great pain
+	var/database/db = ("data/players2.sqlite")
 	var/path
 
 	// Which character slot
