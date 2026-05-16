@@ -119,7 +119,7 @@
 					turfs += spawned_turf
 			if(turfs.len)
 				var/time2make = world.time
-				var/database/db = ("players2.sqlite")
+				var/database/db = ("data/players2.sqlite")
 				var/database/query/select_query = new
 				select_query.Add("SELECT ckey, reason FROM erro_ban WHERE bantype = 'PERMABAN' AND isnull(unbanned)")
 				if(!select_query.Execute(db))
@@ -144,7 +144,7 @@
 /mob/living/carbon/human/proc/quick_copy_prefs()
 	var/list/preference_list = new
 	var/database/query/check = new
-	var/database/db = ("players2.sqlite")
+	var/database/db = ("data/players2.sqlite")
 	check.Add("SELECT player_ckey FROM players WHERE player_ckey = ? AND player_slot = ?", ckey, 1)
 	if(check.Execute(db))
 		if(!check.NextRow())

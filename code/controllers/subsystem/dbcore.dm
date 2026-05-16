@@ -44,7 +44,7 @@ var/datum/subsystem/dbcore/SSdbcore
 	else
 		world.log << "[name] connection established."
 
-	migration_controller_sqlite = new ("players2.sqlite", "players2_empty.sqlite")
+	migration_controller_sqlite = new ("data/players2.sqlite", "players2_empty.sqlite")
 
 	switch(schema_mismatch)
 		if(1)

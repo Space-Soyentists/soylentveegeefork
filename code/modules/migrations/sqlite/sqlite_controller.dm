@@ -20,8 +20,8 @@ var/global/datum/migration_controller/sqlite/migration_controller_sqlite = null
 	..()
 
 /datum/migration_controller/sqlite/setup()
-	if(!fexists("players2.sqlite") && fexists("players2_empty.sqlite"))
-		fcopy("players2_empty.sqlite", "players2.sqlite")
+	if(!fexists("data/players2.sqlite") && fexists("players2_empty.sqlite"))
+		fcopy("players2_empty.sqlite", "data/players2.sqlite")
 	return TRUE
 
 /datum/migration_controller/sqlite/createMigrationTable()
