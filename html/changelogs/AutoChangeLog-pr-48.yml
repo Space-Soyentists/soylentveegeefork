@@ -1,4 +1,0 @@
-author: myfrogfriend
-delete-after: true
-changes:
-- bugfix: Fixed way too many client.view related runtimes
