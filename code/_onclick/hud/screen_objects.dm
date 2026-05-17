@@ -345,7 +345,7 @@
 	var/Y = screeny[1]
 	var/view = world.view
 	if(user && user.client)
-		view = user.client.view
+		view = client_view_num(user.client.view)
 	X = clamp((origin.x + text2num(X) - (view + 1)), 1, world.maxx)
 	Y = clamp((origin.y + text2num(Y) - (view + 1)), 1, world.maxy)
 	return locate(X, Y, origin.z)

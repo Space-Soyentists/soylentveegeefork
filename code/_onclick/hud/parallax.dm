@@ -207,7 +207,7 @@ var/list/cult_parallax[(GRID_WIDTH**2)]
 	var/client/C = mymob.client
 	if(!parallax_initialized)
 		return
-	var/list/everything_in_sight = trange(C.view,get_turf(C.eye))
+	var/list/everything_in_sight = trange(client_view_num(C.view),get_turf(C.eye))
 	if(!(locate(/turf/space) in everything_in_sight) && !(locate(/turf/simulated/floor/glass) in everything_in_sight))
 		return
 

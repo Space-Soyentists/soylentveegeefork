@@ -15,7 +15,7 @@
 	if(!M.client)
 		return
 	M.client.images -= showing
-	showing = get_images(get_turf(M), M.client.view)
+	showing = get_images(get_turf(M), client_view_num(M.client.view))
 	M.client.images += showing
 
 /datum/visioneffect/material/on_remove(var/mob/M)
@@ -30,4 +30,3 @@
 	for (var/turf/TT in trange(view, T))
 		if (TT.holomap_data)
 			. += TT.holomap_data
-			

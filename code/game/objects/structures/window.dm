@@ -86,8 +86,8 @@ var/list/one_way_windows
 /obj/structure/window/proc/update_oneway_nearby_clients()
 	for(var/client/C in clients)
 		if(!istype(C.mob, /mob/dead/observer) && !(M_XRAY in C.mob.mutations))
-			if(((x >= (C.mob.x - C.view)) && (x <= (C.mob.x + C.view))) && ((y >= (C.mob.y - C.view)) && (y <= (C.mob.y + C.view))))
-				C.update_one_way_windows(view(C.view,C.mob))
+			if(((x >= (C.mob.x - client_view_num(C.view))) && (x <= (C.mob.x + client_view_num(C.view)))) && ((y >= (C.mob.y - client_view_num(C.view))) && (y <= (C.mob.y + client_view_num(C.view)))))
+				C.update_one_way_windows(view(client_view_num(C.view),C.mob))
 
 /obj/structure/window/projectile_check()
 	return PROJREACT_WINDOWS
