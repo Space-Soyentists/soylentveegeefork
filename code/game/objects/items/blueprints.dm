@@ -310,7 +310,7 @@ these cannot rename rooms that are in by default BUT can rename rooms that are c
 /obj/item/blueprints/proc/show_room(mob/user)
 	if(shows_archives && user.client)
 		var/tstring = ""
-		for(var/turf/T in spiral_block(get_turf(user),user.client.view))
+		for(var/turf/T in spiral_block(get_turf(user),client_view_num(user.client.view)))
 			tstring = "[T.x],[T.y],[T.z]"
 			if(tstring in blueprint_archives)
 				for(var/I in blueprint_archives[tstring])
@@ -327,9 +327,10 @@ these cannot rename rooms that are in by default BUT can rename rooms that are c
 		if(blueprint_archives.len)
 			if(alert(usr,"This will overwrite any archives, continue?","Overwriting","Yes","No") == "No")
 				return
+
 		user.client.images -= user.client.blueprint_images
 		user.client.blueprint_images = list()
-		for(var/turf/T in view(user.client.view))
+		for(var/turf/T in view(client_view_num(user.client.view)))
 			update_turf_image(T)
 
 //Creates a new area and spreads it to cover the current room

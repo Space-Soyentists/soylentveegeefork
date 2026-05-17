@@ -81,13 +81,13 @@
 		user.visible_message(msg)
 		if(!(emote_type & EMOTE_NO_RUNECHAT))
 			for(var/mob/O in viewers(world.view, user))
-				if(O.client && O?.client?.prefs.get_pref(/datum/preference_setting/toggle/mob_chat_on_map) && get_dist(O, user) < O?.client.view)
+				if(O.client && O?.client?.prefs.get_pref(/datum/preference_setting/toggle/mob_chat_on_map) && get_dist(O, user) < client_view_num(O?.client.view))
 					O.create_chat_message(user, null, message, "", list("italics"))
 	else if(emote_type & EMOTE_AUDIBLE)
 		for(var/mob/O in get_hearers_in_view(world.view, user))
 			O.show_message(msg)
 			if(!(emote_type & EMOTE_NO_RUNECHAT))
-				if(O.client && O?.client?.prefs.get_pref(/datum/preference_setting/toggle/mob_chat_on_map) && get_dist(O, user) < O?.client.view)
+				if(O.client && O?.client?.prefs.get_pref(/datum/preference_setting/toggle/mob_chat_on_map) && get_dist(O, user) < client_view_num(O?.client.view))
 					O.create_chat_message(user, null, message, "", list("italics"))
 
 	var/location = T ? "[T.x],[T.y],[T.z]" : "nullspace"

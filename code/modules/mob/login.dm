@@ -111,7 +111,7 @@
 			client.verbs += /client/proc/readmin
 
 		if(M_FARSIGHT in mutations)
-			client.changeView(max(client.view, world.view+1))
+			client.changeView(max(client_view_num(client.view), world.view+1))
 
 	/* Handle media initialization */
 	client.media = new /datum/media_manager(src)

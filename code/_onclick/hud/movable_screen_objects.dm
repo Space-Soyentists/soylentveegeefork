@@ -52,15 +52,15 @@
 
 /obj/abstract/proc/get_view_size()
 	if(usr && usr.client)
-		. = usr.client.view
+		. = client_view_num(usr.client.view)
 	else
 		. = world.view
 
 /obj/abstract/screen/movable/spell_master/get_view_size()
 	if(spell_holder && spell_holder.client)
-		. = spell_holder.client.view
+		. = client_view_num(spell_holder.client.view)
 	else if(usr && usr.client)
-		. = usr.client.view
+		. = client_view_num(usr.client.view)
 	else
 		. = world.view
 

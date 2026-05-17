@@ -134,9 +134,9 @@
 	if (_total <= 0)
 		return 0
 
-	if (client && (client.view > 7))
+	if (client && (client_view_num(client.view) > 7))
 		//impairement is capped at on players with extended view so that they can't see outside of the overlay
-		_max_range -= (client.view - 7) / 10
+		_max_range -= (client_view_num(client.view) - 7) / 10
 
 	_total = clamp(_total, 1, _max_range)
 

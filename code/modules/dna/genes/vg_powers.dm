@@ -118,7 +118,7 @@ Obviously, requires DNA2.
 
 /datum/dna/gene/basic/grant_spell/farsight/deactivate(var/mob/M,var/connected,var/flags)
 	if(..())
-		if(M.client && M.client.view == world.view + 2)
+		if(M.client && client_view_num(M.client.view) == world.view + 2)
 			M.client.changeView()
 
 /spell/targeted/farsight
