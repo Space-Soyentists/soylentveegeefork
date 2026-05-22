@@ -520,7 +520,9 @@ macro "hotkeymode"
 	elem "CTRL+SHIFT+UP"
 		name = "CTRL+SHIFT+UP"
 		command = ".fillmouse_released"
-
+	elem "Space"
+		name = "Space"
+		command = "Toggle-Throw-Mode"
 
 menu "menu"
 	elem "client_menu"

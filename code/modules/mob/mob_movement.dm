@@ -210,6 +210,7 @@
 
 
 /client/verb/toggle_throw_mode()
+	set name = "Toggle-Throw-Mode"
 	set hidden = 1
 	if(!istype(mob, /mob/living/carbon))
 		return
