@@ -337,6 +337,9 @@ var/updated_stats = 0
 		prefs.SetChangelog(ckey,changelog_hash)
 		to_chat(src, "<span class='info'>Changelog has changed since your last visit.</span>")
 
+	// new players get confused by this being off so lets just enable it by default for now
+	winset_wrapper(null, "mainwindow.macro=hotkeymode;hotkey_toggle.is-checked=true;mapwindow.map.focus=true")
+
 	//Set map label to correct map name
 	winset_wrapper("rpane.mapb", "text=\"[map.nameLong]\"")
 
