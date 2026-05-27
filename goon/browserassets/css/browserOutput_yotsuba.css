@@ -10,7 +10,7 @@ html, body {
 }
 body {
 	background: linear-gradient(to bottom, #D1D5EE, #EDF1FF);
-	background-size: cover;
+	background-attachment: fixed;
 	font-family: Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 9pt;
 	line-height: 1.2;
