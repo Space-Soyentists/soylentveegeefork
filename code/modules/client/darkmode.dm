@@ -31,6 +31,35 @@
 	winset(src, "saybutton", 			"background-color = [COLOR_WHITEMODE_BACKGROUND];text-color = [COLOR_WHITEMODE_TEXT]")
 	winset(src, "hotkey_toggle", 	"background-color = [COLOR_WHITEMODE_BACKGROUND];text-color = [COLOR_WHITEMODE_TEXT]")
 
+/client/proc/superdark_theme()
+	//Main windows
+	winset(src, "mainwindow", 		"background-color = [COLOR_SUPERDARKMODE_BACKGROUND]")
+	winset(src, "outputwindow", 	"background-color = [COLOR_SUPERDARKMODE_BACKGROUND];text-color = [COLOR_SUPERDARKMODE_TEXT]")
+	winset(src, "browseroutput", 	"background-color = [COLOR_SUPERDARKMODE_BACKGROUND];text-color = [COLOR_SUPERDARKMODE_TEXT]")
+	winset(src, "mainvsplit", 		"background-color = [COLOR_SUPERDARKMODE_BACKGROUND]")
+
+	//Buttons
+	winset(src, "textb", 					"background-color = [COLOR_SUPERDARKMODE_BUTTONBACKGROUND];text-color = [COLOR_SUPERDARKMODE_TEXT]")
+	winset(src, "infob", 					"background-color = [COLOR_SUPERDARKMODE_BUTTONBACKGROUND];text-color = [COLOR_SUPERDARKMODE_TEXT]")
+	winset(src, "wikib", 					"background-color = [COLOR_SUPERDARKMODE_BUTTONBACKGROUND];text-color = [COLOR_SUPERDARKMODE_TEXT]")
+	winset(src, "forumb", 				"background-color = [COLOR_SUPERDARKMODE_BUTTONBACKGROUND];text-color = [COLOR_SUPERDARKMODE_TEXT]")
+	winset(src, "rulesb", 				"background-color = [COLOR_SUPERDARKMODE_BUTTONBACKGROUND];text-color = [COLOR_SUPERDARKMODE_TEXT]")
+	winset(src, "changelog", 			"background-color = [COLOR_SUPERDARKMODE_BUTTONBACKGROUND];text-color = [COLOR_SUPERDARKMODE_TEXT]")
+	winset(src, "mapb", 					"background-color = [COLOR_SUPERDARKMODE_BUTTONBACKGROUND];text-color = [COLOR_SUPERDARKMODE_TEXT]")
+	winset(src, "github", 				"background-color = [COLOR_SUPERDARKMODE_BUTTONBACKGROUND];text-color = [COLOR_SUPERDARKMODE_TEXT]")
+	winset(src, "special_button", "background-color = [COLOR_SUPERDARKMODE_BUTTONBACKGROUND];text-color = [COLOR_SUPERDARKMODE_TEXT]")
+	//Status and verb tabs
+	winset(src, "info", 					"background-color = [COLOR_SUPERDARKMODE_DARKBACKGROUND];tab-background-color = [COLOR_SUPERDARKMODE_BACKGROUND];\
+		text-color = [COLOR_SUPERDARKMODE_TEXT];tab-text-color = [COLOR_SUPERDARKMODE_TEXT];prefix-color = [COLOR_SUPERDARKMODE_TEXT];suffix-color = [COLOR_SUPERDARKMODE_TEXT]")
+	winset(src, "infowindow", 		"background-color = [COLOR_SUPERDARKMODE_DARKBACKGROUND];text-color = [COLOR_SUPERDARKMODE_TEXT]")
+	winset(src, "rpane", 					"background-color = [COLOR_SUPERDARKMODE_DARKBACKGROUND];text-color = [COLOR_SUPERDARKMODE_TEXT]")
+	winset(src, "rpanewindow", 		"background-color = [COLOR_SUPERDARKMODE_DARKBACKGROUND];text-color = [COLOR_SUPERDARKMODE_TEXT]")
+	//Say, OOC, me Buttons etc.
+	winset(src, "oocbutton", 			"background-color = [COLOR_SUPERDARKMODE_BACKGROUND];text-color = [COLOR_SUPERDARKMODE_TEXT]")
+	winset(src, "mebutton", 			"background-color = [COLOR_SUPERDARKMODE_BACKGROUND];text-color = [COLOR_SUPERDARKMODE_TEXT]")
+	winset(src, "saybutton", 			"background-color = [COLOR_SUPERDARKMODE_BACKGROUND];text-color = [COLOR_SUPERDARKMODE_TEXT]")
+	winset(src, "hotkey_toggle", 	"background-color = [COLOR_SUPERDARKMODE_BACKGROUND];text-color = [COLOR_SUPERDARKMODE_TEXT]")
+
 /client/proc/dark_theme()
 	//Main windows
 	winset(src, "mainwindow", 		"background-color = [COLOR_DARKMODE_BACKGROUND]")
@@ -59,3 +88,32 @@
 	winset(src, "mebutton", 			"background-color = [COLOR_DARKMODE_BACKGROUND];text-color = [COLOR_DARKMODE_TEXT]")
 	winset(src, "saybutton", 			"background-color = [COLOR_DARKMODE_BACKGROUND];text-color = [COLOR_DARKMODE_TEXT]")
 	winset(src, "hotkey_toggle", 	"background-color = [COLOR_DARKMODE_BACKGROUND];text-color = [COLOR_DARKMODE_TEXT]")
+
+/client/proc/yotsuba_theme()
+	//Main windows
+	winset(src, "mainwindow", 		"background-color = [COLOR_YOTSUBA_BACKGROUND]")
+	winset(src, "outputwindow", 	"background-color = [COLOR_YOTSUBA_BACKGROUND];text-color = [COLOR_YOTSUBA_TEXT]")
+	winset(src, "browseroutput", 	"background-color = [COLOR_YOTSUBA_BACKGROUND];text-color = [COLOR_YOTSUBA_TEXT]")
+	winset(src, "mainvsplit", 		"background-color = [COLOR_YOTSUBA_BACKGROUND]")
+
+	//Buttons
+	winset(src, "textb", 					"background-color = [COLOR_YOTSUBA_BUTTONBACKGROUND];text-color = [COLOR_YOTSUBA_TEXT]")
+	winset(src, "infob", 					"background-color = [COLOR_YOTSUBA_BUTTONBACKGROUND];text-color = [COLOR_YOTSUBA_TEXT]")
+	winset(src, "wikib", 					"background-color = [COLOR_YOTSUBA_BUTTONBACKGROUND];text-color = [COLOR_YOTSUBA_TEXT]")
+	winset(src, "forumb", 				"background-color = [COLOR_YOTSUBA_BUTTONBACKGROUND];text-color = [COLOR_YOTSUBA_TEXT]")
+	winset(src, "rulesb", 				"background-color = [COLOR_YOTSUBA_BUTTONBACKGROUND];text-color = [COLOR_YOTSUBA_TEXT]")
+	winset(src, "changelog", 			"background-color = [COLOR_YOTSUBA_BUTTONBACKGROUND];text-color = [COLOR_YOTSUBA_TEXT]")
+	winset(src, "mapb", 					"background-color = [COLOR_YOTSUBA_BUTTONBACKGROUND];text-color = [COLOR_YOTSUBA_TEXT]")
+	winset(src, "github", 				"background-color = [COLOR_YOTSUBA_BUTTONBACKGROUND];text-color = [COLOR_YOTSUBA_TEXT]")
+	winset(src, "special_button", "background-color = [COLOR_YOTSUBA_BUTTONBACKGROUND];text-color = [COLOR_YOTSUBA_TEXT]")
+	//Status and verb tabs
+	winset(src, "info", 					"background-color = [COLOR_YOTSUBA_DARKBACKGROUND];tab-background-color = [COLOR_YOTSUBA_BACKGROUND];\
+		text-color = [COLOR_YOTSUBA_TEXT];tab-text-color = [COLOR_YOTSUBA_TEXT];prefix-color = [COLOR_YOTSUBA_TEXT];suffix-color = [COLOR_YOTSUBA_TEXT]")
+	winset(src, "infowindow", 		"background-color = [COLOR_YOTSUBA_DARKBACKGROUND];text-color = [COLOR_YOTSUBA_TEXT]")
+	winset(src, "rpane", 					"background-color = [COLOR_YOTSUBA_DARKBACKGROUND];text-color = [COLOR_YOTSUBA_TEXT]")
+	winset(src, "rpanewindow", 		"background-color = [COLOR_YOTSUBA_DARKBACKGROUND];text-color = [COLOR_YOTSUBA_TEXT]")
+	//Say, OOC, me Buttons etc.
+	winset(src, "oocbutton", 			"background-color = [COLOR_YOTSUBA_BACKGROUND];text-color = [COLOR_YOTSUBA_TEXT]")
+	winset(src, "mebutton", 			"background-color = [COLOR_YOTSUBA_BACKGROUND];text-color = [COLOR_YOTSUBA_TEXT]")
+	winset(src, "saybutton", 			"background-color = [COLOR_YOTSUBA_BACKGROUND];text-color = [COLOR_YOTSUBA_TEXT]")
+	winset(src, "hotkey_toggle", 	"background-color = [COLOR_YOTSUBA_BACKGROUND];text-color = [COLOR_YOTSUBA_TEXT]")

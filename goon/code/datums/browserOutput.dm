@@ -130,6 +130,10 @@ For the main html chat area
 					owner.white_theme()
 				if("dark")
 					owner.dark_theme()
+				if("superdark")
+					owner.superdark_theme()
+				if("yotsuba")
+					owner.yotsuba_theme()
 
 	if(data)
 		ehjax_send(data = data)
