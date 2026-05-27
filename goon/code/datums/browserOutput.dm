@@ -13,6 +13,8 @@ For the main html chat area
 	"goon/browserassets/css/font-awesome.css",
 	"goon/browserassets/css/browserOutput.css",
 	"goon/browserassets/css/browserOutput_dark.css",
+	"goon/browserassets/css/browserOutput_superdark.css",
+	"goon/browserassets/css/browserOutput_yotsuba.css",
 	"goon/browserassets/css/browserOutput_colorblindv1.css"
 )
 

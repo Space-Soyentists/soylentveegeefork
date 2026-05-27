@@ -63,9 +63,9 @@ a:visited {color: #6f99f5;}
 .warning {color: #c51e1e}
 .alert {color: #d82020;}
 
-.info {color: #6685f5;}
-.notice {color: #6685f5;}
-.bnotice {color: #6685f5;}
+.info {color: #00ccff;}
+.notice {color: #0066ff;}
+.bnotice {color: #0066ff;}
 .darknotice {color: #ffffff;}
 .interface {color: #8d6ad6;}
 
@@ -83,4 +83,4 @@ a:visited {color: #6f99f5;}
 .popup .close {background: #555555; color: #cccccc;}
 .popup .head {background: #666666; color: #222222;}
 
-.internal.boldnshit {color: #6685f5}
+.internal.boldnshit {color: #0066ff}
