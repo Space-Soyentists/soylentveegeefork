@@ -311,6 +311,13 @@
 	required_reagents = list(LUBE = 1, CHERRYJELLY = 1)
 	result_amount = 2
 
+/datum/chemical_reaction/sproke
+	name = "Sproke"
+	id = SPROKE
+	result = SPROKE
+	required_reagents = list(COLA = 1, SPACE_UP = 1)
+	result_amount = 2
+
 /datum/chemical_reaction/sodium_polyacrylate
 	name = "Sodium Polyacrylate"
 	id = SODIUM_POLYACRYLATE

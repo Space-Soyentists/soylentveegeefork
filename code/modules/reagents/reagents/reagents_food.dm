@@ -1114,3 +1114,13 @@
 					if(prob(10))
 						H.custom_pain("Your chest feels like its on fire!",1)
 						M.audible_scream()
+
+/datum/reagent/sproke
+	name = "Sproke"
+	id = SPROKE
+	description = "Goes well with perscripted medication"
+	reagent_state = REAGENT_STATE_LIQUID
+	color = "#471d14"
+	glass_name = "Sproke"
+	glass_desc = ">drinking goyslop the fancy way"
+

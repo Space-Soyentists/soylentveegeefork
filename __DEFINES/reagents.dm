@@ -525,6 +525,7 @@
 #define PUNCTUALITE		"punctualite"
 #define MAHKOEXPITOL	"mahkoexpitol"
 #define MORATHIAL		"morathial"
+#define SPROKE "sproke"
 
 #define ALIENORIGIN		"alienorigin"
 #define UNKNOWNALPHA	"unknownalpha"
