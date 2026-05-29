@@ -35,7 +35,7 @@ var/global/list/deadmins = list()
 //List of vars that require DEBUG on top of VAREDIT to be able to edit
 var/list/lockedvars = list("vars", "client", "holder", "step_x", "step_y", "step_size")
 
-/var/global/datum/map/active/map = new() //Current loaded map
+/var/global/datum/map/map = new() //Current loaded map
 //Defined in its .dm, see maps/_map.dm for more info.
 
 var/global/obj/effect/datacore/data_core = null

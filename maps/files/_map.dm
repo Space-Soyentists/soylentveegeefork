@@ -7,7 +7,7 @@
 // Map Datums
 // --------------
 // Each map can have its own datum now. This means no more
-// hardcoded bullshit. Same for each Z-level.
+// hardcoded bullshit. <--- (lying) Same for each Z-level.
 //
 // Should be mostly self-explanatory. Define /datum/map/active
 // in your map file. See current maps for examples.

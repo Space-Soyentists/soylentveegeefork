@@ -1,0 +1,46 @@
+{
+	"nameShort": "box",
+	"nameLong": "Box Station",
+	"map_dir": "boxstation",
+	"file_dir": "tgstation",
+	"file": "files/tgstation.dmm",
+	"zLevels": [
+		"/datum/zLevel/station",
+		"/datum/zLevel/centcomm",
+		"/datum/zLevel/space",
+		"/datum/zLevel/space",
+		"/datum/zLevel/mining",
+		"/datum/zLevel/space"
+	],
+	"enabledJobs": [
+		"/datum/job/trader"
+	],
+	"loadMapElements": [
+		"/datum/map_element/dungeon/holodeck",
+		"/datum/map_element/dungeon/mecha_graveyard"
+	],
+	"holomapOffset": {
+		"x": [
+			0,
+			0,
+			0,
+			86,
+			4,
+			0,
+			0
+		],
+		"y": [
+			0,
+			0,
+			0,
+			94,
+			10,
+			0,
+			0
+		]
+	},
+	"center": {
+		"x": 226,
+		"y": 254
+	}
+}

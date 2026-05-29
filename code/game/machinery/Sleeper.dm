@@ -71,7 +71,7 @@
 /obj/machinery/sleeper/New()
 	..()
 	if(deff_icon && map.nameShort == "deff")
-		icon = 'maps/defficiency/medbay.dmi'
+		icon = 'maps/files/defficiency/medbay.dmi'
 	RefreshParts()
 
 /obj/machinery/sleeper/Destroy()

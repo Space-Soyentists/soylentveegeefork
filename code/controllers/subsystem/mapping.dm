@@ -144,6 +144,41 @@ var/skip_turf_init = FALSE //NEVER change this var for anything other than incre
 /datum/subsystem/mapping/Initialize(timeofday)
 	var/watch
 
+	// TODO This could probably get moved elsewhere
+	var/json = file("maps/boxstation.json") // TODO This needs to pick a random map that has votable
+	if (!fexists(json))
+	// TODO we're not seriously gonna just leave vague errors like this right
+		log_world("Can't open map file!")
+		return
+
+	json = file2text(json)
+	if (!json)
+		log_world("That file isn't json...")
+		return
+
+	json = json_decode(json)
+	if (!json)
+		log_world("Failed to decode json!")
+		return
+
+	map.nameShort = json["nameShort"]
+	map.nameLong = json["nameLong"]
+	map.map_dir = json["map_dir"]
+	map.file_dir = json["file_dir"]
+	// TODO Below really messes up code/modules/multiz/basic.dm, something something list OOB
+	for (var/level in json["zLevels"])
+		map.zLevels += text2path(level)
+	for (var/job in json["enabledJobs"])
+		map.enabled_jobs += text2path(job)
+	for (var/elem in json["loadMapElements"])
+		map.load_map_elements += text2path(elem)
+	map.holomap_offset_x = json["holoMapOffset"]["x"]
+	map.holomap_offset_y = json["holoMapOffset"]["y"]
+	map.center_x = json["center"]["x"]
+	map.center_y = json["center"]["y"]
+
+	log_startup_progress("Loading [map.nameLong]")
+
 	if (config.enable_roundstart_away_missions)
 		log_startup_progress("Attempting to generate an away mission...")
 		createRandomZlevel()

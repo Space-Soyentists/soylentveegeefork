@@ -41,7 +41,7 @@
 /obj/machinery/bioprinter/New()
 	..()
 	if(map.nameShort == "deff")
-		icon = 'maps/defficiency/medbay.dmi'
+		icon = 'maps/files/defficiency/medbay.dmi'
 
 	component_parts = newlist(\
 		/obj/item/weapon/circuitboard/bioprinter,\

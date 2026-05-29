@@ -95,7 +95,7 @@
 
 
 /obj/structure/bed/roller/deff
-	icon = 'maps/defficiency/medbay.dmi'
+	icon = 'maps/files/defficiency/medbay.dmi'
 	roller_type = /obj/item/roller/deff
 
 
@@ -110,7 +110,7 @@
 	w_class = W_CLASS_LARGE // Can't be put in backpacks. Oh well.
 
 /obj/item/roller/deff
-	icon = 'maps/defficiency/medbay.dmi'
+	icon = 'maps/files/defficiency/medbay.dmi'
 	bed_type = /obj/structure/bed/roller/deff
 
 /obj/item/roller/attack_self(mob/user)

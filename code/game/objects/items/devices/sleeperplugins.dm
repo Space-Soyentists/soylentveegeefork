@@ -205,7 +205,7 @@
 	return capitalize(genned)
 
 /obj/item/device/plugin/sleeper/alien/provide_overlay(var/obj/machinery/sleeper/my_sleeper)
-	my_sleeper.icon = 'maps/defficiency/medbay.dmi'
+	my_sleeper.icon = 'maps/files/defficiency/medbay.dmi'
 	my_sleeper.overlays += new /image('icons/obj/machines/plugins/sleeperplugin.dmi', "alien_[my_sleeper.occupant ? "closed" : "open"]")
 
 /obj/item/device/plugin/sleeper/alien/provide_extra_overlay(var/obj/machinery/sleeper/my_sleeper)

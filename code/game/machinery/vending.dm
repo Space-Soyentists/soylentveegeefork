@@ -1831,7 +1831,7 @@ var/global/num_vending_terminals = 1
 /obj/machinery/vending/medical/New()
 	..()
 	if(map.nameShort == "deff")
-		icon = 'maps/defficiency/medbay.dmi'
+		icon = 'maps/files/defficiency/medbay.dmi'
 
 //This one's from bay12
 /obj/machinery/vending/plasmaresearch
