@@ -1943,7 +1943,7 @@ Use this proc preferably at the end of an equipment loadout
 
 /mob/proc/get_view_range()
 	if(client)
-		return client.view
+		return client_view_num(client.view)
 	return world.view
 
 /mob/proc/apply_vision_overrides()
