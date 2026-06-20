@@ -58,7 +58,7 @@ var/adminbus_ooc_color
 	// == red text
 	var/first_red = findtext(msg, "==")
 	var/last_red = findlasttext(msg, "==")
-	if (first_red)
+	if (first_red && last_red)
 		if(first_red == last_red)
 			msg = replacetext(msg, "==", "<span style='color:#af0a0f; font-size: 20px;'>")
 			msg += "</span>"
