@@ -69,7 +69,7 @@ var/adminbus_ooc_color
 	// %% glowing text
 	var/first_glow = findtext(msg, "%%")
 	var/last_glow = findlasttext(msg, "%%")
-	if (first_glow)
+	if (first_glow && last_glow)
 		if(first_glow == last_glow)
 			msg = replacetext(msg, "%%", "<span style='color:#00ff33; text-shadow: 0 0 40px #00fe20, 0 0 5px #00fe20;'>")
 			msg += "</span>"
