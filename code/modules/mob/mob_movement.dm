@@ -268,13 +268,8 @@
 
 	Dir_object(Dir)
 
-
 	if(mob.incorporeal_move)
 		Process_Incorpmove(Dir)
-		return
-
-	if(mob.stat == DEAD)
-		mob.ghostize()
 		return
 
 	if(isAI(mob))
