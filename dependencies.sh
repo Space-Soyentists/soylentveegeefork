@@ -7,7 +7,7 @@
 
 # byond version
 export BYOND_MAJOR=516
-export BYOND_MINOR=1680
+export BYOND_MINOR=1684
 
 #node version
 export NODE_VERSION=16
