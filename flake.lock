@@ -3,14 +3,14 @@
     "byond-linux": {
       "flake": false,
       "locked": {
-        "lastModified": 1773802820,
-        "narHash": "sha256-dULzuCR2ZgGmyQAm8oRL6M4BA5s8GFQQ7gb9ippvQrc=",
+        "lastModified": 1782854040,
+        "narHash": "sha256-9464B4gKN3+ZDTJLo0eyT//pr5+rKolsmCgqz1zAZSM=",
         "type": "tarball",
-        "url": "https://www.byond.com/download/build/516/516.1680_byond_linux.zip"
+        "url": "https://www.byond.com/download/build/516/516.1684_byond_linux.zip"
       },
       "original": {
         "type": "tarball",
-        "url": "https://www.byond.com/download/build/516/516.1680_byond_linux.zip"
+        "url": "https://www.byond.com/download/build/516/516.1684_byond_linux.zip"
       }
     },
     "nixpkgs": {
