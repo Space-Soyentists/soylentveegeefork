@@ -240,12 +240,12 @@ var/auxtools_path
 	end_credits.on_world_reboot_end()
 	log_startup_progress("\[[time2text(world.realtime)]\]: end_credits finished in [stop_watch(watch)]s")
 
-	for(var/client/C in clients)
-		if(config.server)	//if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite
-			C << link("byond://[config.server]")
+	// for(var/client/C in clients)
+	//	if(config.server)	//if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite
+	//		C << link("byond://[config.server]")
 
-		else
-			C << link("byond://[world.address]:[world.port]")
+	//	else
+	//		C << link("byond://[world.address]:[world.port]")
 
 	#if AUXTOOLS_DEBUGGER
 	call_ext(auxtools_path, "auxtools_shutdown")()
@@ -309,4 +309,3 @@ var/auxtools_path
 				var/ckey = copytext(line, 1, length(line)+1)
 				var/datum/admins/D = new /datum/admins("Moderator", rights, ckey)
 				D.associate(directory[ckey])
-
