@@ -82,13 +82,13 @@ export const DmBuildAllVotingMapsTarget = new Juke.Target({
       let targetFile = "temp.dme";
       Juke.logger.info("current map target:", targetDir);
       if (!fs.existsSync(targetDir)) {
-        fs.mkdirSync(targetDir);
+	fs.mkdirSync(targetDir);
       }
       let newDmeContent = strippedDmeContent + "#include \"" + selection[1] + "\""
       fs.writeFileSync(targetFile, newDmeContent);
       await DreamMaker(`temp.dme`, {
-        defines: ['CBT', ...get(DefineParameter)],
-        warningsAsErrors: get(WarningParameter).includes('error'),
+	  defines: ['CBT', 'DOCKER', ...get(DefineParameter)],
+	  warningsAsErrors: get(WarningParameter).includes('error'),
       });
       fs.rmSync("temp.dme");
       fs.rmSync("temp.rsc");
