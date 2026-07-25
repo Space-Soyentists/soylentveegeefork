@@ -5,19 +5,19 @@ RUN dpkg --add-architecture i386 \
     && apt-get upgrade -y \
     && apt-get dist-upgrade -y \
     && apt-get install -y --no-install-recommends \
-        ca-certificates
+	ca-certificates
 
 # byond = base + byond installed globally
 FROM base AS byond
 WORKDIR /byond
 
 RUN apt-get install -y --no-install-recommends \
-        curl \
-        unzip \
-        make \
-        libstdc++6:i386 \
-        libcurl4:i386 \
-        python3
+	curl \
+	unzip \
+	make \
+	libstdc++6:i386 \
+	libcurl4:i386 \
+	python3
 
 COPY dependencies.sh .
 
@@ -40,13 +40,13 @@ FROM byond AS build
 WORKDIR /ss13
 
 RUN apt-get install -y --no-install-recommends \
-        curl \
-        rsync
+	curl \
+	rsync
 
 COPY . .
 
 # BRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
-RUN env TG_BOOTSTRAP_NODE_LINUX=1 tools/build/build release \
+RUN env TG_BOOTSTRAP_NODE_LINUX=1 tools/build/build release -DDOCKER \
     && mkdir -p /deploy \
 	&& rsync -avz --exclude=".git" ./* /deploy/
 
@@ -55,8 +55,8 @@ FROM byond
 WORKDIR /ss13
 
 RUN apt-get install -y --no-install-recommends \
-        libssl3:i386 \
-        zlib1g:i386
+	libssl3:i386 \
+	zlib1g:i386
 
 COPY --from=build /deploy ./
 

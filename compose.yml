@@ -7,6 +7,8 @@ services:
     volumes:
       - ./config:/ss13/config
       - ./data:/ss13/data
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
   db:
     container_name: "ss13_mariadb"
     image: mariadb

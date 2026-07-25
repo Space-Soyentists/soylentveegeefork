@@ -197,7 +197,12 @@ var/auxtools_path
 		to_chat(world, "<span class='danger big'>Rebooting the world due to host request!</span>")
 		force_restart = 1
 
+#if defined(DOCKER)
+		world.Export("http://host.docker.internal:64645/restart")
+		// world.Export("http://127.0.0.1:64645/restart")
+#else
 		..()
+#endif
 		return
 
 	if((vote.winner || vote.forced_map) && vote.map_paths)
@@ -215,7 +220,12 @@ var/auxtools_path
 
 	TgsReboot()
 	force_restart = 1
+#if defined(DOCKER)
+	world.Export("http://host.docker.internal:64645/restart")
+		// world.Export("http://127.0.0.1:64645/restart")
+#else
 	..()
+#endif
 
 /world/proc/pre_shutdown()
 	var/procWatch = start_watch()

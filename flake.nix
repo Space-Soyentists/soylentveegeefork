@@ -65,6 +65,8 @@
         # we'll just run build.js from tools/build instead
         just
         nodejs
+        # watchdog.go
+        go
       ];
     };
   };
