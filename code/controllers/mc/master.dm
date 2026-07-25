@@ -71,7 +71,9 @@ var/CURRENT_TICKLIMIT = TICK_LIMIT_RUNNING
 /datum/controller/master/proc/Shutdown()
 	processing = FALSE
 	for(var/datum/subsystem/ss in subsystems)
+		log_world("Shutting down [ss.name]...")
 		ss.Shutdown()
+	log_world("Master subsystem has shut down.")
 
 // Returns 1 if we created a new mc, 0 if we couldn't due to a recent restart,
 //	-1 if we encountered a runtime trying to recreate it
@@ -119,7 +121,7 @@ var/CURRENT_TICKLIMIT = TICK_LIMIT_RUNNING
 
 
 // Please don't stuff random bullshit here,
-// 	Make a subsystem, give it the SS_NO_FIRE flag, and do your work in it's Initialize()
+//	Make a subsystem, give it the SS_NO_FIRE flag, and do your work in it's Initialize()
 /datum/controller/master/proc/Setup()
 	set waitfor = FALSE
 	sleep(1 SECONDS)
