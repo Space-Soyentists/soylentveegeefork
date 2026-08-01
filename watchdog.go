@@ -1,9 +1,11 @@
 package main
 
-import "fmt"
-import "log"
-import "net/http"
-import "os/exec"
+import (
+	"fmt"
+	"log"
+	"net/http"
+	"os/exec"
+)
 
 func main() {
 	http.HandleFunc("/restart", func(w http.ResponseWriter, r *http.Request) {
@@ -12,5 +14,5 @@ func main() {
 		fmt.Fprintf(w, "Restarted!\n")
 	})
 
-	log.Fatal(http.ListenAndServe("127.0.0.1:64645", nil))
+	log.Fatal(http.ListenAndServe("0.0.0.0:64645", nil))
 }
