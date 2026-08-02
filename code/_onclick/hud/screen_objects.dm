@@ -384,6 +384,10 @@
 			if(isliving(usr))
 				var/mob/living/L = usr
 				L.lay_down()
+				if(usr.resting)
+					src.icon_state = "act_rest_active"
+				else
+					src.icon_state = "act_rest"
 
 		if("mov_intent")
 			if (iscarbon(usr))
